@@ -1,0 +1,25 @@
+{
+  "manifest_version":2,
+  "name":"Death Timer",
+  "version":"0.5",
+  "description":"A timer that helps you put things into perspective.",
+  "permissions":[
+  "activeTab", "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches":[
+        "<all_urls>"
+      ],
+      "js":["content.js"],
+      "css":["content.css"]
+    }
+  ],
+  "browser_action":{
+    "default_icon":"icon.png",
+    "default_popup":"popup.html"
+  },
+  "background":{
+    "scripts":["background.js"]
+  }
+}
